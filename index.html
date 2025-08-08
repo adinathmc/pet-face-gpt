@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PetFaceGPT – Decode the Whisker Wisdom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🐾 PetFaceGPT</h1>
+    <p>Select your pet, upload a photo, and let our AI + nonsense engine interpret its feelings.</p>
+
+    <label for="petType">Choose your pet:</label>
+    <select id="petType">
+      <option value="dog">🐶 Dog</option>
+      <option value="cat">🐱 Cat</option>
+      <option value="rabbit">🐰 Rabbit</option>
+    </select>
+    
+    <br><br>
+    
+    <!-- File upload section -->
+    <div class="input-section">
+      <input type="file" id="petPhoto" accept="image/*">
+      <br><br>
+      <img id="preview" src="" alt="Pet Preview" />
+    </div>
+    
+    <br>
+    <button id="analyzeBtn" onclick="analyzePet()" disabled>🔍 Analyze Expression</button>
+
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <!-- Load FaceAPI models -->
+  <script src="https://unpkg.com/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
